@@ -14,7 +14,7 @@ const Add=()=>{
 
     const handleChange=(e)=>{
         setBook(prev=>({...prev, [e.target.name]: e.target.value}))
-    }
+    };
     const handleClick=async e=>{
         e.preventDefault()
         try{
@@ -24,7 +24,7 @@ const Add=()=>{
         catch(err){
             console.log(err)
         }
-    }
+    };
     console.log(book)
     return(
         <div className='form'>
@@ -58,6 +58,6 @@ const Add=()=>{
             </button>
             </div>
     )
-}
+};
 
 export default Add;

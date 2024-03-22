@@ -1,7 +1,7 @@
 import React from 'react'
 import { useLocation, useNavigate } from 'react-router-dom';
 import { useState } from 'react'
-import axios from 'axios';
+import axios from 'axios'
 
 const Update=()=>{
     const [book,setBook]=useState({
@@ -10,14 +10,14 @@ const Update=()=>{
         price:null,
         cover:"",
     });
-    const navigate=useNavigate()
-    const location=useLocation()
+    const navigate=useNavigate();
+    const location=useLocation();
 
-    const bookId=location.pathname.split("/")[2]
+    const bookId=location.pathname.split("/")[2];
 
     const handleChange=(e)=>{
         setBook(prev=>({...prev, [e.target.name]: e.target.value}))
-    }
+    };
     const handleClick=async e=>{
         e.preventDefault()
         try{
@@ -27,7 +27,7 @@ const Update=()=>{
         catch(err){
             console.log(err)
         }
-    }
+    };
     console.log(book)
     return(
         <div className='form'>
@@ -61,6 +61,6 @@ const Update=()=>{
             </button>
             </div>
     )
-}
+};
 
 export default Update;
